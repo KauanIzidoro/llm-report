@@ -10,3 +10,6 @@ Este Agente terá como principal objetivo responder perguntas sobre algum projet
 
 - [LangChain](https://www.langchain.com/)
 
+> Teste prático `graphviz`
+
+Graphviz é um software de visualização de grafos de código aberto. A visualização de grafos é uma maneira de representar informações estruturais como diagramas de grafos e redes abstratas. Ela tem aplicações importantes em redes, bioinformática, engenharia de software, design de banco de dados e web, aprendizado de máquina e em interfaces visuais para outros domínios técnicos.
