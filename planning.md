@@ -1,44 +1,53 @@
+# Configurações iniciais
 
-# Parte da Task
-```
-Focar na parte do desenvolvimento do agente
-O que preciso para criar o agente
-Quais opções temos de LLMs
-Quais bibliotecas podemos usar
-```
+### Preparar o ambiente para desenvolver o agente
 
-## Foco na Parte do Desenvolvimento do Agente
-### O que é necessário para criar o agente?
-1. Estrutura do pipeline:
-- Receber input.
-- Processar dados com o LLM.
-- Post-processar output para adequar ao formato esperado.
-- Integração com o LLM escolhido.
-- Testes com casos de uso mockados.
+- Clonar e navegar até a pasta do projeto
 
-## Quais Bibliotecas Podemos Usar?
-### Para interação com LLMs:
+- Instalar a bibliotecas necessárias a partir de um arquivo **requirements** ou **poetry**:
 
-- openai (para modelos GPT).
-- transformers (Hugging Face).
-- langchain (para pipelines e fluxos).
+### Quais Bibliotecas Podemos Usar?
 
-### Para processamento de dados:
+**Manipulação de Código:**
+- Python: `ast`, `jedi`, `rope`.
+- JavaScript: `esprima`, `babel-parser`.
 
-- pandas (para estruturar dados de entrada/saída).
-- json (para manipulação de inputs e outputs).
+**Criação de Diagramas:**
+  - `Graphviz`.
+  - `PlantUML`.
+  - `ERAlchemy`
 
-### Para testes:
+**Integração com LLMs:**
+  - OpenAI: `openai` (Python SDK).
+  - Hugging Face: `transformers`.
+  - LangChain: Biblioteca para orquestrar interações com LLMs.
 
-- unittest ou pytest (testes automatizados).
+**Processamento de dados:**
 
-## Quais Opções Temos de LLMs?
-### Baseados em APIs
+- ``pandas`` (para estruturar dados de entrada/saída).
+- ``json`` (para manipulação de inputs e outputs).
 
+# Escolha e Configuração do Modelo LLM
+
+## O que é necessário para criar o agente?
+
+### Estrutura do pipeline:
+
+1. Receber input.
+    - Strings textuais ou JSON básico.
+    - Exemplo: "Desenhe um fluxograma básico."
+2. Processar dados com o LLM.
+   - Focar em Python como linguagem principal, dada a disponibilidade de bibliotecas robustas para NLP e LLMs.
+3. Post-processar output para adequar ao formato esperado.
+    - Resposta processada: O código segue esse fluxo A > B > C
+    - Resposta mockada: JSON representando os elementos do fluxograma.
+
+### Quais Opções Temos de LLMs?
+
+**Baseados em APIs**
 - OpenAI GPT (e.g., GPT-4).
 - Cohere.
 
-### Modelos open-source
-
+**Modelos open-source**
 - Hugging Face Transformers (e.g., BERT, GPT-NeoX).
 - LangChain com Llama2.
