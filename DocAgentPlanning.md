@@ -1,10 +1,11 @@
-# Roadmap para Implementação do Agente LLM
+# Planejamento para o desenvolvimento do DocAgent 
 
 ## Semana 1: Configuração do Ambiente
 ### Objetivo: Preparar o ambiente de desenvolvimento e garantir que todas as ferramentas e dependências estejam configuradas.
 
 - **Dia 1**: 
-  - Clonar o repositório do projeto e organizar a estrutura inicial.
+  - Clonar o repositório do projeto e organizar a estrutura local. 
+  - Estamos considerando que o projeto está armazenado localmente.
   - Criar e ativar um ambiente virtual.
   - Instalar bibliotecas essenciais (a partir de `requirements.txt` ou gerenciador `poetry`).
   - **Estimativa**: 2h.
@@ -21,7 +22,7 @@
 
 ---
 
-## Semana 2: Desenvolvimento Básico do Agente
+## Semana 2: Desenvolvimento Básico do Agente com LLM 
 ### Objetivo: Construir as funções principais do pipeline e realizar testes básicos.
 
 - **Dia 4**: 
@@ -67,7 +68,7 @@
 - **Dia 10**: 
   - Instalar e configurar as dependências para Hugging Face Transformers e PyTorch.
   - Carregar um modelo leve (`distilgpt2` ou similar).
-  - **Estimativa**: 3h.
+  - **Estimativa**: 3h. 
 
 - **Dia 11**: 
   - Implementar a função para gerar respostas usando o modelo Hugging Face.
@@ -104,7 +105,7 @@
 ## Considerações Finais
 - **Total de Horas Estimadas**: ~50 horas.
 - **Recursos Necessários**: 
-  - Conta OpenAI e/ou Hugging Face.
+  - Conta OpenAI, Hugging Face ou GCP para usar Gemini API.
   - Ambiente Python configurado.
   - Acesso a ferramentas de versionamento (e.g., Git).
   - Ferramentas de visualização (e.g., Graphviz, PlantUML).
