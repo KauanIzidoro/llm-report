@@ -3,8 +3,6 @@ from dotenv import load_dotenv
 
 
 load_dotenv()
-
-
 class Settings(BaseSettings):
     PROJECT_PATH: str
     OUTPUT_PATH: str
