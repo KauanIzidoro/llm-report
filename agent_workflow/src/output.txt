@@ -1,0 +1,54 @@
+A função `calendar()` retorna um dicionário contendo a data e a hora atuais. Aqui está um detalhamento do código:
+
+1. **Importando o módulo `time`:**
+   ```python
+   import time
+   ```
+   Isso importa o módulo `time` embutido, que fornece funções relacionadas ao tempo.
+
+2. **Definindo a função `calendar()`:**
+   ```python
+   def calendar():
+       # ...
+   ```
+   Isso define uma função chamada `calendar()`
+
+3. **Definindo a lista de `months`:**
+   ```python
+   months = ["JAN", "FEB", ..., "NOV", "DEC"]
+   ```
+   Isso cria uma lista chamada `months` contendo as abreviações dos 12 meses.
+
+4. **Obtendo a hora local:**
+   ```python
+   localdate = time.localtime()
+   ```
+   Isso chama `time.localtime()`, que retorna uma tupla contendo os componentes da hora local atuais (ano, mês, dia, hora, etc.). Armazenamos essa tupla na variável `localdate`.
+
+5. **Retornando um dicionário:**
+   ```python
+   return {
+       "Year": localdate.tm_year,
+       "Month": months[localdate.tm_mon - 1],
+       "Day": localdate.tm_mday,
+       "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+   }
+   ```
+   A função retorna um dicionário contendo as seguintes chaves e valores:
+     - `"Year"`: O ano da tupla `localdate`.
+     - `"Month"`: O nome abreviado do mês da lista `months`. Usamos `localdate.tm_mon - 1` porque os índices da lista começam em 0.
+     - `"Day"`: O dia do mês da tupla `localdate`.
+     - `"Time"`: A hora atual formatada como "HH:MM:SS" usando f-string.
+
+**Em resumo, chamar a função `calendar()` retornará um dicionário como este:**
+
+```
+{
+    "Year": 2023,
+    "Month": "OCT",
+    "Day": 26,
+    "Time": "10:15:30"
+}
+```
+
+Os valores de "Year", "Month", "Day" e "Time" serão alterados de acordo com a data e hora atuais em que você executar a função.
