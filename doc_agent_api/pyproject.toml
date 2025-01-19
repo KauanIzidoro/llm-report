@@ -18,6 +18,11 @@ taskipy = "^1.14.1"
 line-length = 79
 extende-exclude = ['model-output']
 
+[tool.ruff.lint]
+preview = true
+select = ['I', 'F', 'E', 'W', 'PL', 'PT']
+
+
 
 [build-system]
 requires = ["poetry-core"]
