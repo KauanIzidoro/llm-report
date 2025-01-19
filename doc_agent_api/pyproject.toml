@@ -10,6 +10,10 @@ python = "^3.12"
 uvicorn = "^0.34.0"
 fastapi = "^0.115.6"
 
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.9.2"
+taskipy = "^1.14.1"
+
 
 [build-system]
 requires = ["poetry-core"]
