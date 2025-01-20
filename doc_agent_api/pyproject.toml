@@ -27,7 +27,7 @@ select = ['I', 'F', 'E', 'W', 'PL', 'PT']
 [tool.taskipy.tasks]
 lint = 'ruff check . ; ruff check . --diff'
 format = 'ruff check . --fix; ruff format .'
-run = 'uvicorn main:app --port 5459'
+run = 'uvicorn main:app'
 
 [build-system]
 requires = ["poetry-core"]
