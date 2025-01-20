@@ -1,4 +1,5 @@
 import re 
+import time
 import os 
 from settings import SETTINGS
 import time
@@ -29,8 +30,8 @@ def mock_chat_to_model(
             context_text = c.read()
             
         context_prompt = f'{context_text}\n\n{prompt}'
-        with open(model_output, 'w', encoding='utf-8') as f:
-            f.write(context_prompt)
+        with open(model_output, 'a', encoding='utf-8') as f:
+            f.write(f'{time.ctime}\n{context_prompt}\n\n')
         
         return context_prompt
     except Exception as e:
