@@ -7,7 +7,8 @@ class Settings(BaseSettings):
     OUTPUT_PATH: str
     GOOGLE_API_KEY: str
     MODEL: str 
-    API_PORT: str
+    API_PORT: int
+    SYSTEM_INSTRUCTION: str
     
 
 SETTINGS = Settings()
