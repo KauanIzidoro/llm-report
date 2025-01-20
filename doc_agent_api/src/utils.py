@@ -20,6 +20,24 @@ def validate_input(text_prompt: str):
         raise Exception("O prompt deve ser texto!")
     return text_prompt
 
+
+def mock_chat_to_model(
+    prompt: str, context=SETTINGS.PROJECT_PATH, model_output=SETTINGS.OUTPUT_PATH
+):
+    try:
+        with open(context, 'r', encoding='utf-8') as c:
+            context_text = c.read()
+            
+        context_prompt = f'{context_text}\n\n{prompt}'
+        with open(model_output, 'w', encoding='utf-8') as f:
+            f.write(context_prompt)
+        
+        return context_prompt
+    except Exception as e:
+        print(f'Erro ao gerar resposta: {e}')
+        return None
+
+
 def chat_to_model(
     prompt: str, context=SETTINGS.PROJECT_PATH, model_output=SETTINGS.OUTPUT_PATH
 ):
@@ -49,5 +67,5 @@ def chat_to_model(
     except Exception as e:
         print(f'Erro ao gerar resposta: {e}')
         return None
-        
+
     
