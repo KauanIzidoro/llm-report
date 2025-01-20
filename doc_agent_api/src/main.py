@@ -1,7 +1,11 @@
+import uvicorn 
+from settings import SETTINGS
 from fastapi import FastAPI
+from routes import router
 
-app = FastAPI()
+app = FastAPI(title='DocAgent', version='0.1.0')
+app.include_router(router)
 
-@app.get('/status')
-def status_route():
-    return {"STATUS": "OK"}
+if __name__ == '__main__':
+    uvicorn.run(app,port=SETTINGS.API_PORT)
+    
