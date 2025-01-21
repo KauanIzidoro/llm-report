@@ -19,11 +19,15 @@ pydantic-settings = "^2.7.1"
 
 [tool.ruff]
 line-length = 79
-extende-exclude = ['model-output']
+extend-exclude = ['model-output']
 
 [tool.ruff.lint]
 preview = true
 select = ['I', 'F', 'E', 'W', 'PL', 'PT']
+
+[tool.ruff.format]
+preview = true
+quote-style = 'single'
 
 [tool.taskipy.tasks]
 lint = 'ruff check . ; ruff check . --diff'
