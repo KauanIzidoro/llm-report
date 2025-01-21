@@ -7,29 +7,21 @@ import google.generativeai as genai
 from settings import SETTINGS
 
 
-def validate_input(text_prompt: str):
-    """_summary_
-    Args:
-        text_prompt (str): texto que seja usado como prompt para interagir com o modelo.
-
-    Raises:
-        Exception: Prompts que forem caminhos de arquivos ou imagens não são permitidos.
-
-    Returns:
-        str: prompt se for válido.
-    """
-    if re.search(os.sep, text_prompt) or re.search(
-        r'\.(png|svg|jpg)$', text_prompt
-    ):
-        raise Exception('O prompt deve ser texto!')
-    return text_prompt
-
-
 def mock_chat_to_model(
     prompt: str,
     context=SETTINGS.PROJECT_PATH,
     model_output=SETTINGS.OUTPUT_PATH,
 ):
+    """Gera um prompt para o modelo, utilizando um contexto de um arquivo de texto e o prompt fornecido.
+
+    Args:
+        prompt (str): O texto do prompt a ser enviado ao modelo.
+        context (str, optional): O caminho do arquivo que contém o contexto. Padrão é `SETTINGS.PROJECT_PATH`.
+        model_output (str, optional): O caminho do arquivo onde a resposta do modelo será gravada. Padrão é `SETTINGS.OUTPUT_PATH`.
+
+    Returns:
+        str: O prompt combinado com o contexto.
+    """
     try:
         with open(context, 'r', encoding='utf-8') as c:
             context_text = c.read()
@@ -45,6 +37,15 @@ def mock_chat_to_model(
 
 
 def receive_input(prompt: str, input_file=SETTINGS.INPUT_PATH):
+    """Recebe um prompt de entrada e grava no arquivo especificado.
+
+    Args:
+        prompt (str): O texto do prompt a ser gravado.
+        input_file (str, optional): O caminho do arquivo onde o prompt será gravado. Padrão é `SETTINGS.INPUT_PATH`.
+
+    Returns:
+        str: O texto do prompt gravado no arquivo.
+    """
     try:
         with open(input_file, 'a', encoding='utf-8') as f:
             f.write(f'{prompt}\n\n')
@@ -60,6 +61,16 @@ def chat_to_model_rest(
     model_output=SETTINGS.OUTPUT_PATH,
     context=SETTINGS.PROJECT_PATH,
 ):
+    """Interage com o modelo usando uma API REST, lendo um prompt e contexto de arquivos e gravando a resposta gerada.
+
+    Args:
+        input_file (str, optional): O caminho do arquivo que contém o prompt de entrada. Padrão é `SETTINGS.INPUT_PATH`.
+        model_output (str, optional): O caminho do arquivo onde a resposta do modelo será gravada. Padrão é `SETTINGS.OUTPUT_PATH`.
+        context (str, optional): O caminho do arquivo que contém o contexto. Padrão é `SETTINGS.PROJECT_PATH`.
+
+    Returns:
+        str: O contexto combinado com o prompt.
+    """
     try:
         with open(input_file, 'r', encoding='utf-8') as f:
             prompt = f.read()
@@ -83,12 +94,15 @@ def chat_to_model(
     context=SETTINGS.PROJECT_PATH,
     model_output=SETTINGS.OUTPUT_PATH,
 ):
-    """_summary_
+    """Envia um prompt para o modelo de IA e grava a resposta gerada em um arquivo.
 
     Args:
-        prompt (str): texto que seja usado como prompt para interagir com o modelo.
-        context (optional): Defaults to SETTINGS.PROJECT_PATH.
-        model_output (optional): Defaults to SETTINGS.OUTPUT_PATH.
+        prompt (str): O texto do prompt a ser enviado ao modelo.
+        context (str, optional): O caminho do arquivo que contém o contexto. Padrão é `SETTINGS.PROJECT_PATH`.
+        model_output (str, optional): O caminho do arquivo onde a resposta do modelo será gravada. Padrão é `SETTINGS.OUTPUT_PATH`.
+
+    Returns:
+        str: A resposta gerada pelo modelo.
     """
     try:
         with open(context, 'r', encoding='utf-8') as c:
