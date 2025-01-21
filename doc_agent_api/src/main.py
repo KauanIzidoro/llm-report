@@ -3,7 +3,7 @@ from settings import SETTINGS
 from fastapi import FastAPI
 from routes import router
 
-app = FastAPI(title='DocAgent', version='0.1.0')
+app = FastAPI(title='DocAgentAPI', version='0.1.0')
 app.include_router(router)
 
 if __name__ == '__main__':
