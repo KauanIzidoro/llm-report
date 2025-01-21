@@ -89,5 +89,9 @@ async def rt_chat(ws: WebSocket):
 def rest_chat():
     return HTMLResponse(html_rest)
 
-
+@router.post('/chat')
+def rest_chat(user_prompt: str):
+    validate_prompt = validate_input(text_prompt=user_prompt)
+    model_output = mock_chat_to_model(prompt=validate_prompt)
+    return {"response": model_output}
     
