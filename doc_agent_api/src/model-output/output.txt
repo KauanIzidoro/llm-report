@@ -1,0 +1,1666 @@
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+aa
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+qual a capital 
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+ola 
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+oque faz a funçAO calendar
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+me explique o fluxo do codgio 
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+exit
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+q
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+aa
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+ola
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+oal
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+aola
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+aoaoa
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+aa
+
+<built-in function ctime>
+import time
+
+
+def calendar():
+    months = [
+        "JAN",
+        "FEB",
+        "MAR",
+        "APR",
+        "MAY",
+        "JUN",
+        "JUL",
+        "AUG",
+        "SEP",
+        "OCT",
+        "NOV",
+        "DEC",
+    ]
+    localdate = time.localtime()
+    return {
+        "Year": localdate.tm_year,
+        "Month": months[localdate.tm_mon - 1],
+        "Day": localdate.tm_mday,
+        "Time": f"{localdate.tm_hour}:{localdate.tm_min}:{localdate.tm_sec}",
+    }
+
+
+def xyz():
+    return "xyz"
+
+
+a
+

@@ -125,3 +125,15 @@ def chat_to_model(
     except Exception as e:
         print(f'Erro ao gerar resposta: {e}')
         return None
+
+
+def validate_input(text_prompt: str):
+    """_summary_
+    """
+    if re.search(os.sep, text_prompt) or re.search(r"\.(png|svg|jpg)$", text_prompt):
+        raise Exception("O prompt deve ser texto!")
+    if re.search(os.sep, text_prompt) or re.search(
+        r'\.(png|svg|jpg)$', text_prompt
+    ):
+        raise Exception('O prompt deve ser texto!')
+    return text_prompt
