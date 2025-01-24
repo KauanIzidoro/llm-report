@@ -148,4 +148,104 @@ GenerateContentResponse(
         "total_token_count": 247
       }
     }),
+)response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "{\"datetime\": \"2024-07-28T17:37:02.151Z\", \"http_status\": 200, \"input_path\": \"\", \"message\": \"The code uses the \\\"time\\\" library.\", \"model_response\": \"The Python code uses the built-in \\\"time\\\" library.\"}"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.2502252383109851
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 182,
+        "candidates_token_count": 78,
+        "total_token_count": 260
+      }
+    }),
+)response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "{\"datetime\": \"string\", \"http_status\": 200, \"input_path\": \"string\", \"message\": \"The code uses the \\\"time\\\" library.\", \"model_response\": \"string\"}"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.04126308494144016
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 182,
+        "candidates_token_count": 45,
+        "total_token_count": 227
+      }
+    }),
+)response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "{\"model_response\": \"The function `calendar` returns a dictionary containing year, month, day and time information.  The function `xyz` returns a string.\"}"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.23675831386021207
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 183,
+        "candidates_token_count": 35,
+        "total_token_count": 218
+      }
+    }),
+)response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "{\"datetime\": \"2024-08-24T17:17:21.115Z\", \"http_status\": 200, \"input_path\": \"null\", \"message\": \"Success\", \"model_response\": \"The code uses the \\\"time\\\" library.\"}"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.24149283809938293
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 184,
+        "candidates_token_count": 69,
+        "total_token_count": 253
+      }
+    }),
 )
