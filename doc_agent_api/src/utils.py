@@ -28,7 +28,7 @@ def validate_input(prompt: str, context_path: str = SETTINGS.PROJECT_PATH, model
     
     
 def chat_to_model(model_input: ModelInputPydantic) -> ModelOutputPydantic:
-    """Envia um prompt para o modelo de IA e grava a resposta gerada em um arquivo.
+    """
     """
     try: 
         genai.configure(api_key=SETTINGS.GOOGLE_API_KEY)
