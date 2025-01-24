@@ -248,4 +248,354 @@ GenerateContentResponse(
         "total_token_count": 253
       }
     }),
+)response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "{\"datetime\": \"string\", \"http_status\": 200, \"input_path\": \"string\", \"message\": \"O c\u00f3digo n\u00e3o faz uso de threads.\", \"model_response\": \"string\"}"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.037768946452574295
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 181,
+        "candidates_token_count": 44,
+        "total_token_count": 225
+      }
+    }),
+)response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "{\"datetime\": \"2024-07-26T17:26:11.151Z\", \"http_status\": 200, \"input_path\": \"null\", \"message\": \"The code uses one library: \\\"time\\\"\", \"model_response\": \"1\"}"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.19765486436731675
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 185,
+        "candidates_token_count": 68,
+        "total_token_count": 253
+      }
+    }),
+)response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "{\"datetime\": \"2024-07-30T18:42:11.152Z\", \"http_status\": 200, \"input_path\": \"null\", \"message\": \"The code was written in Python.\", \"model_response\": \"null\"}"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.1901926560835405
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 180,
+        "candidates_token_count": 66,
+        "total_token_count": 246
+      }
+    }),
+)response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "{\"datetime\": \"2024-02-27T17:26:11.152Z\", \"http_status\": 200, \"input_path\": \"calendar.py\", \"message\": \"Request successful\", \"model_response\": \"{\\n  \\\"Year\\\": 2024,\\n  \\\"Month\\\": \\\"Feb\\\",\\n  \\\"Day\\\": 27,\\n  \\\"Time\\\": \\\"17:26:11\\\"\\n}\"}"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.13497464591210043
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 174,
+        "candidates_token_count": 109,
+        "total_token_count": 283
+      }
+    }),
+)response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "{\"datetime\": \"string\", \"http_status\": 200, \"input_path\": \"string\", \"message\": \"success\", \"model_response\": \"{\\n  \\\"Year\\\": 2024,\\n  \\\"Month\\\": \\\"OCT\\\",\\n  \\\"Day\\\": 27,\\n  \\\"Time\\\": \\\"18:13:42\\\"\\n}\"}"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.12216365768248777
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 174,
+        "candidates_token_count": 83,
+        "total_token_count": 257
+      }
+    }),
+)response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "{\"datetime\": \"string\", \"http_status\": 200, \"input_path\": \"string\", \"message\": \"success\", \"model_response\": \"string\"}"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.0835224891963758
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 174,
+        "candidates_token_count": 38,
+        "total_token_count": 212
+      }
+    }),
+)response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "{\"datetime\": \"string\", \"http_status\": 200, \"input_path\": \"string\", \"message\": \"The code is in Python\", \"model_response\": \"string\"}"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.06395559651511055
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 178,
+        "candidates_token_count": 42,
+        "total_token_count": 220
+      }
+    }),
+)response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "{\"model_answer\": \"{\\n  \\\"Year\\\": 2024,\\n  \\\"Month\\\": \\\"OCT\\\",\\n  \\\"Day\\\": 27,\\n  \\\"Time\\\": \\\"13:44:17\\\"\\n}\\n\"}"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.16950402436433015
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 174,
+        "candidates_token_count": 54,
+        "total_token_count": 228
+      }
+    }),
+)response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "{\"model_answer\": \"python\"}"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.05769173055887222
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 180,
+        "candidates_token_count": 8,
+        "total_token_count": 188
+      }
+    }),
+)response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "{\"model_answer\": \"The code uses the \\\"time\\\" library.\"}"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.009851940907537937
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 179,
+        "candidates_token_count": 16,
+        "total_token_count": 195
+      }
+    }),
+)response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "{\"model_answer\": \"A fun\u00e7\u00e3o `calendar()` n\u00e3o espera nenhum par\u00e2metro. Ela usa a fun\u00e7\u00e3o `time.localtime()` para obter informa\u00e7\u00f5es de data e hora do sistema e retorna um dicion\u00e1rio contendo o ano, m\u00eas, dia e hora.\"}"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.09591873636785543
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 183,
+        "candidates_token_count": 53,
+        "total_token_count": 236
+      }
+    }),
+)response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "{\"model_answer\": \"O(1)\"}"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.002189920876513828
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 184,
+        "candidates_token_count": 11,
+        "total_token_count": 195
+      }
+    }),
+)response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "{\"model_answer\": \"O(1)\"}"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.0021914267404512925
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 184,
+        "candidates_token_count": 11,
+        "total_token_count": 195
+      }
+    }),
+)response:
+GenerateContentResponse(
+    done=True,
+    iterator=None,
+    result=protos.GenerateContentResponse({
+      "candidates": [
+        {
+          "content": {
+            "parts": [
+              {
+                "text": "{\"model_answer\": \"The code uses the \\\"time\\\" library.\"}"
+              }
+            ],
+            "role": "model"
+          },
+          "finish_reason": "STOP",
+          "avg_logprobs": -0.0008797320770099759
+        }
+      ],
+      "usage_metadata": {
+        "prompt_token_count": 182,
+        "candidates_token_count": 16,
+        "total_token_count": 198
+      }
+    }),
 )

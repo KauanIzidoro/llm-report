@@ -12,3 +12,6 @@ class ModelOutputPydantic(BaseModel):
     datetime: str
     http_status: int
     message: str
+
+class ModelOutputDTO(BaseModel):
+    model_answer: str

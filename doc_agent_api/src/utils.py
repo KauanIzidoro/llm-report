@@ -1,5 +1,5 @@
 import os
-from schemas import ModelInputPydantic, ModelOutputPydantic
+from schemas import ModelInputPydantic, ModelOutputDTO
 import google.generativeai as genai
 
 from settings import SETTINGS
@@ -27,8 +27,8 @@ def validate_input(prompt: str, context_path: str = SETTINGS.PROJECT_PATH, model
     
     
     
-def chat_to_model(model_input: ModelInputPydantic) -> ModelOutputPydantic:
-    """
+def chat_to_model(model_input: ModelInputPydantic) -> ModelOutputDTO:
+    """<>
     """
     try: 
         genai.configure(api_key=SETTINGS.GOOGLE_API_KEY)
@@ -36,11 +36,11 @@ def chat_to_model(model_input: ModelInputPydantic) -> ModelOutputPydantic:
         response = model.generate_content(
             model_input.prompt, 
             generation_config=genai.GenerationConfig(
-                response_mime_type='application/json', response_schema=ModelOutputPydantic
+                response_mime_type='application/json', response_schema=ModelOutputDTO
             ),
         )
         with open(model_input.output_path, 'a', encoding='utf-8') as f: 
             f.write(str(response))
-        return response
+        return response.text
     except Exception as e: 
         return {'Error': f'Erro ao validar entrada: {e}'}
