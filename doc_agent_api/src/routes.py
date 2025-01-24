@@ -2,8 +2,7 @@ from fastapi import APIRouter, WebSocket
 from fastapi.responses import HTMLResponse
 
 from utils import (
-    mock_chat_to_model,
-    validate_input,
+    validate_input, chat_to_model
 )
 
 router = APIRouter()
@@ -52,7 +51,7 @@ def get():
 async def rt_chat(ws: WebSocket):
     await ws.accept()
     while True:
-        text_prompt = await ws.receive_text()
-        validate_prompt = validate_input(text_prompt=text_prompt)
-        model_output = mock_chat_to_model(prompt=validate_prompt)
-        await ws.send_text(model_output)
+        user_prompt = await ws.receive_text()
+        validate_prompt = validate_input(prompt=user_prompt)
+        response = chat_to_model(validate_prompt)
+        await ws.send_text(str(response))
