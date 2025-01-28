@@ -26,7 +26,7 @@ def validate_input(prompt: str, context_path: str = SETTINGS.PROJECT_PATH, model
             return {'Error': f'Erro ao validar entrada: {e}'}
     
     
-    
+
 def chat_to_model(model_input: ModelInputPydantic) -> ModelOutputDTO:
     """<>
     """
@@ -44,3 +44,4 @@ def chat_to_model(model_input: ModelInputPydantic) -> ModelOutputDTO:
         return response.text
     except Exception as e: 
         return {'Error': f'Erro ao validar entrada: {e}'}
+    
