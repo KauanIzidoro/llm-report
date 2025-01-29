@@ -7,7 +7,6 @@ class ModelInputPydantic(BaseModel):
 
 
 class ModelOutputPydantic(BaseModel):
-    input_path: str
     model_response: str
     datetime: str
     http_status: int

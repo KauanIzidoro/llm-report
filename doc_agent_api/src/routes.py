@@ -2,7 +2,7 @@ from fastapi import APIRouter, WebSocket, File, UploadFile
 from fastapi.responses import HTMLResponse
 
 from utils import (
-    validate_input, chat_to_model
+    validate_input, chat_to_model, store_file
 )
 
 router = APIRouter()
@@ -25,7 +25,7 @@ html = """
             }
             form {
                 display: flex;
-                gap: 10px; /* Espaçamento entre os elementos */
+                gap: 10px; 
                 align-items: center;
                 margin-bottom: 20px;
             }
@@ -61,18 +61,15 @@ html = """
     </head>
     <body>
         <h1>DocAgentChat</h1>
-        <!-- Formulário para enviar mensagens -->
         <form onsubmit="sendMessage(event)">
-            <input type="text" id="messageText" autocomplete="off" placeholder="Digite sua mensagem..." />
-            <button type="submit">Enviar</button>
-            <button type="button">Gerar diagrama</button>
+            <input type="text" id="messageText" autocomplete="off" placeholder="Message DocAgent" />
+            <button type="submit">Send</button>
+            <button type="button">Generate diagram</button>
         </form>
-        <!-- Formulário para upload de arquivo -->
         <form id="fileForm" onsubmit="uploadFile(event)">
             <input type="file" id="fileInput" name="file" />
             <button type="submit">Upload File</button>
         </form>
-        <!-- Lista de mensagens -->
         <ul id="messages"></ul>
 
         <script>
@@ -103,7 +100,7 @@ html = """
                     formData.append('file', file);
 
                     try {
-                        const response = await fetch('/up-file', {
+                        const response = await fetch('http://127.0.0.1:8000/up-file', {
                             method: 'POST',
                             body: formData
                         });
@@ -112,7 +109,7 @@ html = """
                         alert('File uploaded successfully!');
                     } catch (error) {
                         console.error('Error uploading file:', error);
-                        alert('Error uploading file');
+                        alert('Error uploading file');ka
                     }
                 } else {
                     alert('Please select a file to upload');
@@ -140,5 +137,6 @@ async def rt_chat(ws: WebSocket):
 
 @router.post('/up-file')
 async def upload_file(file: UploadFile = File(...)):
+    store_file(file)
     return {"message": "Received file"}
 

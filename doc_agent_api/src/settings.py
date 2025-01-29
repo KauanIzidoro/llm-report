@@ -6,6 +6,7 @@ load_dotenv()
 
 class Settings(BaseSettings):
     PROJECT_PATH: str
+    FILE_PATH: str
     OUTPUT_PATH: str
     INPUT_PATH: str
     GOOGLE_API_KEY: str
