@@ -1,16 +1,15 @@
 from pydantic import BaseModel
 
-class ModelInputPydantic(BaseModel):
-    context_path: str
-    output_path: str
+class ModelInput(BaseModel):
     prompt: str
 
 
-class ModelOutputPydantic(BaseModel):
-    model_response: str
+class ModelOutput(BaseModel):
+    model_answer: str
+    mermaid_code: str
     datetime: str
     http_status: int
-    message: str
 
 class ModelOutputDTO(BaseModel):
     model_answer: str
+    mermaid_code: str
