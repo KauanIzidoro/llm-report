@@ -119,11 +119,11 @@ html = """
 """
 
 
-@router.get('/')
+@router.get('/', tags=['Test Page'])
 def get():
     return HTMLResponse(html)
 
-@router.post('/up-file')
+@router.post('/up-file', tags=['File upload'])
 async def upload_file(file: UploadFile = File(...)):
     file_status = storage_context_file(user_file=file)
     return file_status
