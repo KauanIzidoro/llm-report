@@ -1,92 +1,99 @@
 import os
-from schemas import ModelInputPydantic, ModelOutputDTO
+import shutil
+from datetime import datetime
+import json
+from schemas import ModelInput, ModelOutput, ModelOutputDTO
 import google.generativeai as genai
 from fastapi import UploadFile, HTTPException
 from settings import SETTINGS
 
 
-def validate_input(prompt: str, context_path: str = SETTINGS.PROJECT_PATH, model_output_path: str = SETTINGS.OUTPUT_PATH) -> ModelInputPydantic:
-    
-    if os.path.exists(context_path) and os.path.exists(model_output_path):
-        try: 
-            with open(context_path, 'r', encoding='utf-8') as c:
-                context = c.read()
-            
-            if context == '' or prompt == '':
-                return {'Error': 'Context file is empty.'}
-            
-            user_prompt = ModelInputPydantic(
-                context_path=context_path,
-                output_path=model_output_path,
-                prompt=f'{prompt}\n\n{context}'
-            )
-            return user_prompt
-        except Exception as e: 
-            return {'Error': f'Error validating input: {e}'}
-    
-    
 
-def chat_to_model(model_input: ModelInputPydantic) -> ModelOutputDTO:
-    """<>
+def storage_context_file(user_file: UploadFile):
+    """_summary_
+
+    Args:
+        user_file (UploadFile): _description_
     """
+    try:
+        if user_file.filename.endswith((".jpeg",".png",".jpg", ".svg")):
+            return "unsupported file format"
+    except Exception as e:
+        return HTTPException(status_code=500, detail=str(e))
+        
+    with open(os.path.join(SETTINGS.USER_FILE_PATH, user_file.filename), "wb") as buffer:
+        shutil.copyfileobj(user_file.file, buffer)
+    return HTTPException(status_code=201, detail="context file created.")
+
+def process_user_input(user_input: str) -> ModelInput:
+    """_summary_
+
+    Args:
+        user_input (str): _description_
+
+    Returns:
+        ModelInput: _description_
+    """
+    if user_input == None or user_input == '':
+        return 'user prompt is empty'
+    context = ''
+    for files in os.listdir(SETTINGS.USER_FILE_PATH):
+        file_path = os.path.join(SETTINGS.USER_FILE_PATH, files)
+        if os.path.isfile(file_path):
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    context += f.read()
+            except UnicodeDecodeError:
+                print('error while trying to read files')
+    validate_prompt = ModelInput(
+        prompt=f'{user_input}\n\n{context}'
+    )
     try: 
+        with open(SETTINGS.USER_INPUT_PATH, "a") as uif:
+            uif.write(str({
+                'user_input': user_input,
+                'context': context,
+                'prompt': validate_prompt.prompt
+            }))
+    except UnicodeDecodeError:
+        print('error for write user input')
+    return validate_prompt
+        
+def chat_to_model(input: ModelInput) -> ModelOutput:
+    """_summary_
+
+    Args:
+        input (ModelInput): _description_
+
+    Returns:
+        ModelOutput: _description_
+    """
+    try:
         genai.configure(api_key=SETTINGS.GOOGLE_API_KEY)
         model = genai.GenerativeModel(SETTINGS.MODEL)
         response = model.generate_content(
-            model_input.prompt, 
-            generation_config=genai.GenerationConfig(
-                response_mime_type='application/json', response_schema=ModelOutputDTO
+            input.prompt, 
+            generation_config=genai.types.GenerationConfig(
+                response_mime_type='application/json', 
+                response_schema=ModelOutputDTO,
             ),
         )
-        with open(model_input.output_path, 'a', encoding='utf-8') as f: 
-            f.write(str(response.text))
-        return response.text
-    except Exception as e: 
-        return {'Error': f'Error validating input: {e}'}
-    
-# def store_file(file: UploadFile, file_path=SETTINGS.FILE_PATH):
-#     """<>
-#     """
-#     file_type = file.filename.split('.')[-1].lower()
-#     if file_type in ['.png', '.jpg']:
-#         raise HTTPException(status_code=400, detail='Only text files will be supported.')
-    
-#     os.makedirs(file_path, exist_ok=True)
-#     with open(os.path.join(file_path, file.filename), 'a', encoding='utf-8') as f:
-#         f.write(str(file.read()))
-#         return {'Message': 'File saved successfully.'}
-    
-async def store_file(file: UploadFile, file_path: str = SETTINGS.FILE_PATH):
-    """
-    Salva o arquivo recebido no diretório especificado.
-    Apenas arquivos de texto são permitidos.
-    """
-    # Verifica a extensão do arquivo
-    file_type = file.filename.split('.')[-1].lower()
-    if file_type in ['png', 'jpg', 'jpeg']:
-        raise HTTPException(status_code=400, detail='Apenas arquivos de texto são permitidos.')
-
-    # Cria o diretório se não existir
-    os.makedirs(file_path, exist_ok=True)
-
-    # Define o caminho completo para salvar o arquivo
-    full_path = os.path.join(file_path, file.filename)
-
-    # Salva o arquivo
-    try:
-        # Lê o conteúdo do arquivo
-        content = await file.read()
-
-        # Se for um arquivo de texto, decodifica o conteúdo
-        if file_type in ['txt', 'csv', 'log']:  # Adicione outras extensões de texto, se necessário
-            content = content.decode('utf-8')
-            with open(full_path, 'w', encoding='utf-8') as f:
-                f.write(content)
-        else:
-            # Para outros tipos de arquivo (binários), salva diretamente
-            with open(full_path, 'wb') as f:
-                f.write(content)
-
-        return {'Message': f'Arquivo "{file.filename}" salvo com sucesso em "{file_path}".'}
+        model_output = ModelOutput(
+            model_answer=json.loads(response.text)['model_answer'],
+            mermaid_code=json.loads(response.text)['mermaid_code'],
+            datetime=datetime.now().strftime('%Y-%m-%dT%H:%M:%S'),
+            http_status='200'
+        )
+        with open(SETTINGS.OUTPUT_PATH, 'a') as f:
+            f.write(str({
+                'model_answer': model_output.model_answer,
+                'mermaid_code': model_output.mermaid_code,
+                'datetime': model_output.datetime,
+                'httP_status': model_output.http_status
+            }))
+        return model_output
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f'Erro ao salvar o arquivo: {str(e)}')
+        print(str(e))
+
+
+    
