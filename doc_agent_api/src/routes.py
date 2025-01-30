@@ -71,7 +71,7 @@ html = """
         <ul id="messages"></ul>
 
         <script>
-            var ws = new WebSocket("ws://localhost:8000/ws");
+            var ws = new WebSocket("ws://localhost:5459/ws");
             ws.onmessage = function(event) {
                 var messages = document.getElementById('messages');
                 var message = document.createElement('li');
@@ -98,7 +98,7 @@ html = """
                     formData.append('file', file);
 
                     try {
-                        const response = await fetch('http://127.0.0.1:8000/up-file', {
+                        const response = await fetch('http://127.0.0.1:5459/up-file', {
                             method: 'POST',
                             body: formData
                         });
