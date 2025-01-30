@@ -1,9 +1,7 @@
 from fastapi import APIRouter, WebSocket, File, UploadFile
 from fastapi.responses import HTMLResponse
 
-from utils import (
-    validate_input, chat_to_model, store_file
-)
+from utils import storage_context_file, process_user_input, chat_to_model
 
 router = APIRouter()
 
@@ -109,7 +107,7 @@ html = """
                         alert('File uploaded successfully!');
                     } catch (error) {
                         console.error('Error uploading file:', error);
-                        alert('Error uploading file');ka
+                        alert('Error uploading file');
                     }
                 } else {
                     alert('Please select a file to upload');
@@ -125,18 +123,19 @@ html = """
 def get():
     return HTMLResponse(html)
 
+@router.post('/up-file')
+async def upload_file(file: UploadFile = File(...)):
+    file_status = storage_context_file(user_file=file)
+    return file_status
 
 @router.websocket('/ws')
 async def rt_chat(ws: WebSocket):
     await ws.accept()
     while True:
         user_prompt = await ws.receive_text()
-        validate_prompt = validate_input(prompt=user_prompt)
-        response = chat_to_model(validate_prompt)
+        validate_prompt = process_user_input(user_input=user_prompt)
+        response = chat_to_model(input=validate_prompt)
         await ws.send_text(str(response))
 
-@router.post('/up-file')
-async def upload_file(file: UploadFile = File(...)):
-    store_file(file)
-    return {"message": "Received file"}
+
 
