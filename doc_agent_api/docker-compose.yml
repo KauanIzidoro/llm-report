@@ -1,0 +1,18 @@
+
+services:
+  app:
+    build: .
+    container_name: fastapi_app
+    ports:
+      - "5459:5459"
+    volumes:
+      - ./src/user-input:/app/src/user-input
+      - ./src/model-output:/app/src/model-output
+    environment:
+      - USER_INPUT_PATH="./src/user-input/input.txt"
+      - USER_FILE_PATH="./src/user-input/context-files"
+      - OUTPUT_PATH="/model-output/output.txt"
+      - GOOGLE_API_KEY="AIzaSyAmAdzuWTs3b6QaWGRU0PeU1YCENn37O0M"
+      - MODEL="gemini-1.5-flash"
+      - API_PORT=5459
+      - SYSTEM_INSTRUCTION="Você é um engenheiro de software e precisa explicar os projetos desenvolvidos para um novo integrante de sua squad. Responda de forma sucinta e, se necessário, gere um diagrama usando Mermaid. Retorne apenas o código Mermaid, sem explicações ou comentários. O código deve começar com 'graph TD;' ou 'graph LR;'. Não sobrescreva chaves como [texto(texto)] ou (texto(texto)), e evite o uso de vírgulas dentro de chaves. O objetivo é fornecer explicações claras e diagramas precisos para facilitar o entendimento do projeto."
