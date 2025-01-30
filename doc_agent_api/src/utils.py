@@ -70,7 +70,7 @@ def chat_to_model(input: ModelInput) -> ModelOutput:
     """
     try:
         genai.configure(api_key=SETTINGS.GOOGLE_API_KEY)
-        model = genai.GenerativeModel(SETTINGS.MODEL)
+        model = genai.GenerativeModel(model_name=SETTINGS.MODEL, system_instruction=SETTINGS.SYSTEM_INSTRUCTION)
         response = model.generate_content(
             input.prompt, 
             generation_config=genai.types.GenerationConfig(
