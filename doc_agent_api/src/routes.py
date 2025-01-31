@@ -62,7 +62,6 @@ html = """
         <form onsubmit="sendMessage(event)">
             <input type="text" id="messageText" autocomplete="off" placeholder="Message DocAgent" />
             <button type="submit">Send</button>
-            <button type="button">Generate diagram</button>
         </form>
         <form id="fileForm" onsubmit="uploadFile(event)">
             <input type="file" id="fileInput" name="file" />
