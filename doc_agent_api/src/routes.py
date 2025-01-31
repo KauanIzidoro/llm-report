@@ -105,8 +105,8 @@ html = """
                         console.log(result);
                         alert('File uploaded successfully!');
                     } catch (error) {
-                        console.error('Error uploading file:', error);
-                        alert('Error uploading file');
+                        console.error('Upload');
+                        alert('uploading file');
                     }
                 } else {
                     alert('Please select a file to upload');

@@ -42,7 +42,7 @@ def process_user_input(user_input: str) -> ModelInput:
         if os.path.isfile(file_path):
             try:
                 with open(file_path, 'r', encoding='utf-8') as f:
-                    context += f.read()
+                    context += f.read() # \n entre as linhas
             except UnicodeDecodeError:
                 print('error while trying to read files')
     validate_prompt = ModelInput(
