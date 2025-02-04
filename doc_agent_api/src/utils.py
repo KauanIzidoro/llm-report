@@ -59,11 +59,11 @@ def process_user_input(user_input: str) -> ModelInput:
         print('error for write user input')
     return validate_prompt
         
-def chat_to_model(input: ModelInput) -> ModelOutput:
+def chat_to_model(input_to_model: ModelInput) -> ModelOutput:
     """_summary_
 
     Args:
-        input (ModelInput): _description_
+        _input (ModelInput): _description_
 
     Returns:
         ModelOutput: _description_
@@ -72,7 +72,7 @@ def chat_to_model(input: ModelInput) -> ModelOutput:
         genai.configure(api_key=SETTINGS.GOOGLE_API_KEY)
         model = genai.GenerativeModel(model_name=SETTINGS.MODEL, system_instruction=SETTINGS.SYSTEM_INSTRUCTION)
         response = model.generate_content(
-            input.prompt, 
+            input_to_model.prompt, 
             generation_config=genai.types.GenerationConfig(
                 response_mime_type='application/json', 
                 response_schema=ModelOutputDTO,

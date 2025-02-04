@@ -133,7 +133,7 @@ async def rt_chat(ws: WebSocket):
     while True:
         user_prompt = await ws.receive_text()
         validate_prompt = process_user_input(user_input=user_prompt)
-        response = chat_to_model(input=validate_prompt)
+        response = chat_to_model(input_to_model=validate_prompt)
         await ws.send_text(str(response))
 
 
