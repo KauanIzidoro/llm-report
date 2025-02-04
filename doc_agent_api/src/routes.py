@@ -70,7 +70,7 @@ html = """
         <ul id="messages"></ul>
 
         <script>
-            var ws = new WebSocket("ws://localhost:5459/ws");
+            var ws = new WebSocket("ws://localhost:5459/chat");
             ws.onmessage = function(event) {
                 var messages = document.getElementById('messages');
                 var message = document.createElement('li');
@@ -124,17 +124,38 @@ def get():
 
 @router.post('/up-file', tags=['File upload'])
 async def upload_file(file: UploadFile = File(...)):
+    """_summary_
+
+    Args:
+        file (UploadFile, optional): _description_. Defaults to File(...).
+
+    Returns:
+        _type_: _description_
+    """
     file_status = storage_context_file(user_file=file)
     return file_status
 
-@router.websocket('/ws')
+@router.websocket('/chat')
 async def rt_chat(ws: WebSocket):
+    """_summary_
+
+    Args:
+        ws (WebSocket): _description_
+    """
     await ws.accept()
     while True:
         user_prompt = await ws.receive_text()
         validate_prompt = process_user_input(user_input=user_prompt)
         response = chat_to_model(input_to_model=validate_prompt)
         await ws.send_text(str(response))
+
+@router.get('/history-input', tags=['Query data: List user inputs'])
+async def user_inputs():
+    return {'ok': 'ok'}
+
+@router.get('/agent-outputs', tags=['Query data: List model outputs'])
+async def agent_outputs():
+    return {'status': 'ok'}
 
 
 
