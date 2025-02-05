@@ -13,7 +13,13 @@ def storage_context_file(user_file: UploadFile):
     """_summary_
 
     Args:
-        user_file (UploadFile): _description_
+        user_file (UploadFile): File uploaded by the user.
+
+    Returns:
+        HTTP Object: Status of the file upload.
+
+    Description:
+        Receive files and storage in local memory.
     """
     try:
         if user_file.filename.endswith((".jpeg",".png",".jpg", ".svg")):
@@ -29,10 +35,13 @@ def process_user_input(user_input: str) -> ModelInput:
     """_summary_
 
     Args:
-        user_input (str): _description_
+        user_input (str): string input from the user.
 
     Returns:
-        ModelInput: _description_
+        ModelInput: Schema of the validade user input.
+    
+    Description: 
+        Validate and process the user input.
     """
     if user_input == None or user_input == '':
         return 'user prompt is empty'
@@ -42,7 +51,7 @@ def process_user_input(user_input: str) -> ModelInput:
         if os.path.isfile(file_path):
             try:
                 with open(file_path, 'r', encoding='utf-8') as f:
-                    context += f.read() # \n entre as linhas
+                    context += f.read() 
             except UnicodeDecodeError:
                 print('error while trying to read files')
     validate_prompt = ModelInput(
@@ -63,10 +72,13 @@ def chat_to_model(input_to_model: ModelInput) -> ModelOutput:
     """_summary_
 
     Args:
-        _input (ModelInput): _description_
+        _input (ModelInput): Schema of the validade user input.
 
     Returns:
-        ModelOutput: _description_
+        ModelOutput: Schema of the model output.
+
+    Description:
+        Setup the model and send prompt for Gemini API.
     """
     try:
         genai.configure(api_key=SETTINGS.GOOGLE_API_KEY)

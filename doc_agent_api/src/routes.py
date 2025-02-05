@@ -127,10 +127,10 @@ async def upload_file(file: UploadFile = File(...)):
     """_summary_
 
     Args:
-        file (UploadFile, optional): _description_. Defaults to File(...).
+        file (UploadFile, optional): Defaults to File(...).
 
     Returns:
-        _type_: _description_
+        file_status (str): Status of the file upload.
     """
     file_status = storage_context_file(user_file=file)
     return file_status
@@ -141,6 +141,7 @@ async def rt_chat(ws: WebSocket):
 
     Args:
         ws (WebSocket): _description_
+
     """
     await ws.accept()
     while True:
@@ -151,11 +152,14 @@ async def rt_chat(ws: WebSocket):
 
 @router.get('/history-input', tags=['Query data: List user inputs'])
 async def user_inputs():
-    return {'ok': 'ok'}
+    """_summary_
+    """
+    pass
 
 @router.get('/agent-outputs', tags=['Query data: List model outputs'])
 async def agent_outputs():
-    return {'status': 'ok'}
-
+    """_summary_
+    """
+    pass
 
 
