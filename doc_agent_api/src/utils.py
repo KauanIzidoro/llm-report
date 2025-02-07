@@ -79,6 +79,22 @@ def process_user_input(user_input: str) -> ModelInput:
         print(f'error while trying to write JSON file: {e}')
     return validate_prompt
 
+def list_local_data(directory_path: str) -> list[dict]:
+    """_summary_
+    """
+    json_local_data = []
+
+    for filename in os.listdir(path=directory_path):
+        if filename.endswith('.json'):
+            file_path = os.path.join(directory_path, filename)
+            try:
+                with open(file_path, 'r', encoding='utf-8') as file:
+                    data = json.load(file)
+                    json_local_data.append(data)
+            except Exception as e:
+                print(f"Error reading file {filename}: {e}")
+        return json_local_data
+
 
 def chat_to_model(input_to_model: ModelInput) -> ModelOutput:
     """_summary_
