@@ -1,15 +1,31 @@
-# Como construir um Agente de IA com LLM
+# DocAgent API
 
 Este Agente terá como principal objetivo responder perguntas sobre algum projeto específico, neste caso o agente terá acesso ao repositório onde o projeto esta versionado.
 
-> Referências usadas:
+> Ferramentas: 
 
-- [LangFlow](https://www.langflow.org/pt/)
+- `Python 3.12.*`
+- `Fastapi 0.115.6`
+- `Websockets 14.2`
+- `google-generativeai ^0.8.3`
 
-- [RAG (Retrieval Augmented Generation)](https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview)
 
-- [LangChain](https://www.langchain.com/)
+> Como usar o `DocAgent API`:
 
-> Teste prático da biblioteca [`graphviz`](https://graphviz.org/)
+> Gere as credenciais Azure e clone o repositório:
 
-Graphviz é um software de visualização de grafos de código aberto. A visualização de grafos é uma maneira de representar informações estruturais como diagramas de grafos e redes abstratas. Ela tem aplicações importantes em redes, bioinformática, engenharia de software, design de banco de dados e web, aprendizado de máquina e em interfaces visuais para outros domínios técnicos.
+```bash
+git clone https://desenv2rp@dev.azure.com/desenv2rp/Document%20Image%20Processing/_git/DocAgent
+```
+
+> Crie um arquivo `.env` seguindo o exemplo `.env.sample`:
+
+> Execute o  `Docker container`:
+
+```bash
+docker-compose up -d
+```
+
+> Acesse a documentação da API:
+
+![api-doc](docs/api-doc.png)
