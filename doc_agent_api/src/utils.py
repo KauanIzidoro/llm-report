@@ -31,20 +31,22 @@ def storage_context_file(user_file: UploadFile):
         shutil.copyfileobj(user_file.file, buffer)
     return HTTPException(status_code=201, detail="context file created.")
 
+        
 def process_user_input(user_input: str) -> ModelInput:
-    """_summary_
+    """Validate and process the user input.
 
     Args:
         user_input (str): string input from the user.
 
     Returns:
-        ModelInput: Schema of the validade user input.
+        ModelInput: Schema of the validated user input.
     
     Description: 
-        Validate and process the user input.
+        Validate and process the user input. Each input is saved in a separate JSON file.
     """
-    if user_input == None or user_input == '':
+    if user_input is None or user_input == '':
         return 'user prompt is empty'
+    
     context = ''
     for files in os.listdir(SETTINGS.USER_FILE_PATH):
         file_path = os.path.join(SETTINGS.USER_FILE_PATH, files)
@@ -54,20 +56,30 @@ def process_user_input(user_input: str) -> ModelInput:
                     context += f.read() 
             except UnicodeDecodeError:
                 print('error while trying to read files')
+    
     validate_prompt = ModelInput(
         prompt=f'{user_input}\n\n{context}'
     )
-    try: 
-        with open(SETTINGS.USER_INPUT_PATH, "a") as uif:
-            uif.write(str({
-                'user_input': user_input,
-                'context': context,
-                'prompt': validate_prompt.prompt
-            }))
-    except UnicodeDecodeError:
-        print('error for write user input')
+    
+    timestamp = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+    json_filename = f"user_input_{timestamp}.json"
+    json_filepath = os.path.join(SETTINGS.USER_INPUT_PATH, json_filename)
+    
+    data_to_save = {
+        'user_input': user_input,
+        'context': context,
+        'prompt': validate_prompt.prompt,
+        'timestamp': timestamp
+    }
+    
+    try:
+        with open(json_filepath, "w", encoding='utf-8') as json_file:
+            json.dump(data_to_save, json_file, ensure_ascii=False, indent=4)
+    except Exception as e:
+        print(f'error while trying to write JSON file: {e}')
     return validate_prompt
-        
+
+
 def chat_to_model(input_to_model: ModelInput) -> ModelOutput:
     """_summary_
 
