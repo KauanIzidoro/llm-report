@@ -1,0 +1,6 @@
+{
+    "model_answer": "O código C++ lê dados de um sensor DHT22 e os envia para o console serial.  Primeiro, ele tenta conectar ao Wifi. Se a conexão for bem sucedida, entra em um loop que lê a temperatura e umidade do sensor DHT22 e imprime esses valores no console. Se falhar na conexão wifi, o programa termina.",
+    "mermaid_code": "graph TD;A[Setup] --> B{Conectar Wifi};B -- Conectado --> C[Loop];B -- Falha --> D[Fim];C --> E[Ler DHT22];E --> F[Imprimir dados];F --> C;",
+    "datetime": "2025-02-10T15:17:05",
+    "http_status": 200
+}
