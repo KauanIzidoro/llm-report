@@ -2,7 +2,7 @@ from fastapi import APIRouter, WebSocket, File, UploadFile, HTTPException
 from fastapi.responses import HTMLResponse
 from settings import SETTINGS
 
-from utils import storage_context_file, process_user_input, chat_to_model, list_local_data
+from utils import storage_context_file, process_user_input, chat_to_model, list_chat_files
 
 router = APIRouter()
 
@@ -158,7 +158,7 @@ async def user_inputs():
     Description:
         List all inputs from the user.
     """
-    user_input_data = list_local_data(SETTINGS.USER_INPUT_PATH)
+    user_input_data = list_chat_files(SETTINGS.USER_INPUT_PATH)
     if not user_input_data:
         raise HTTPException(status_code=404, detail="No JSON files found in the directory.")
     return user_input_data
@@ -171,7 +171,7 @@ async def agent_outputs():
     Description:
         List all outputs from the model.
     """
-    model_output_data = list_local_data(directory_path=SETTINGS.OUTPUT_PATH)
+    model_output_data = list_chat_files(directory_path=SETTINGS.OUTPUT_PATH)
     if not model_output_data:
         raise HTTPException(status_code=404, detail="No JSON files found in the directory.")
     return model_output_data

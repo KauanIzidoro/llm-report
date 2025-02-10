@@ -1,6 +1,7 @@
 import os
 import shutil
 from datetime import datetime
+from typing import Dict, Any
 import json
 from schemas import ModelInput, ModelOutput, ModelOutputDTO
 import google.generativeai as genai
@@ -79,13 +80,12 @@ def process_user_input(user_input: str) -> ModelInput:
         print(f'error while trying to write JSON file: {e}')
     return validate_prompt
 
-def list_local_data(directory_path: str) -> list[dict]:
+def list_chat_files(directory_path: str) -> list[dict]:
     """_summary_
     """
     json_local_data = []
 
     for filename in os.listdir(path=directory_path):
-        if filename.endswith('.json'):
             file_path = os.path.join(directory_path, filename)
             try:
                 with open(file_path, 'r', encoding='utf-8') as file:
@@ -93,14 +93,53 @@ def list_local_data(directory_path: str) -> list[dict]:
                     json_local_data.append(data)
             except Exception as e:
                 print(f"Error reading file {filename}: {e}")
-        return json_local_data
+            return json_local_data
+    
 
+# def chat_to_model(input_to_model: ModelInput) -> ModelOutput:
+#     """_summary_
+
+#     Args:
+#         _input (ModelInput): Schema of the validade user input.
+
+#     Returns:
+#         ModelOutput: Schema of the model output.
+
+#     Description:
+#         Setup the model and send prompt for Gemini API.
+#     """
+#     try:
+#         genai.configure(api_key=SETTINGS.GOOGLE_API_KEY)
+#         model = genai.GenerativeModel(model_name=SETTINGS.MODEL, system_instruction=SETTINGS.SYSTEM_INSTRUCTION)
+#         response = model.generate_content(
+#             input_to_model.prompt, 
+#             generation_config=genai.types.GenerationConfig(
+#                 response_mime_type='application/json', 
+#                 response_schema=ModelOutputDTO,
+#             ),
+#         )
+#         model_output = ModelOutput(
+#             model_answer=json.loads(response.text)['model_answer'],
+#             mermaid_code=json.loads(response.text)['mermaid_code'],
+#             datetime=datetime.now().strftime('%Y-%m-%dT%H:%M:%S'),
+#             http_status='200'
+#         )
+#         with open(SETTINGS.OUTPUT_PATH, 'a') as f:
+#             f.write(str({
+#                 'model_answer': model_output.model_answer,
+#                 'mermaid_code': model_output.mermaid_code,
+#                 'datetime': model_output.datetime,
+#                 'httP_status': model_output.http_status
+#             }))
+#         return model_output
+#     except Exception as e:
+#         print(str(e))
 
 def chat_to_model(input_to_model: ModelInput) -> ModelOutput:
     """_summary_
 
     Args:
-        _input (ModelInput): Schema of the validade user input.
+        input_to_model (ModelInput): Schema of the validated user input.
 
     Returns:
         ModelOutput: Schema of the model output.
@@ -124,16 +163,21 @@ def chat_to_model(input_to_model: ModelInput) -> ModelOutput:
             datetime=datetime.now().strftime('%Y-%m-%dT%H:%M:%S'),
             http_status='200'
         )
-        with open(SETTINGS.OUTPUT_PATH, 'a') as f:
-            f.write(str({
-                'model_answer': model_output.model_answer,
-                'mermaid_code': model_output.mermaid_code,
-                'datetime': model_output.datetime,
-                'httP_status': model_output.http_status
-            }))
-        return model_output
+        timestamp = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+        json_filename = f"user_input_{timestamp}.json"
+        json_filepath = os.path.join(SETTINGS.OUTPUT_PATH, json_filename)
+
+        data_to_save = {
+            'model_answer': model_output.model_answer,
+            'mermaid_code': model_output.mermaid_code,
+            'datetime': model_output.datetime,
+            'http_status': model_output.http_status
+        }
+        with open(json_filepath, 'w', encoding='utf-8') as json_file:
+            json.dump(data_to_save, json_file, ensure_ascii=False, indent=4)
     except Exception as e:
-        print(str(e))
+            print(f'error while trying to write JSON file: {e}')
+    return model_output
 
 
     
