@@ -1,0 +1,6 @@
+{
+    "model_answer": "Existem dois arquivos no diretório de contexto. Um arquivo .ino e um .cs",
+    "mermaid_code": "graph LR;A[Arquivo 1.ino]-->B(Arquivo 2.cs);",
+    "datetime": "2025-02-12T10:45:56",
+    "http_status": 200
+}

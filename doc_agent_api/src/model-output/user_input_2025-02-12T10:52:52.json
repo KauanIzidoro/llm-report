@@ -1,0 +1,6 @@
+{
+    "model_answer": "Os arquivos são:\n\n*   **AccessController.cs:** Controller em C# para gerenciar acessos. Usa os modelos Access e Users, e o AccessBuilder.\n*   **LoginController.cs:** Controller em C# para gerenciar logins. Usa a LoginFacade.\n*   **UsersController.cs:** Controller em C# para gerenciar usuários. Usa o modelo Users.",
+    "mermaid_code": "graph LR;A[AccessController.cs] --> B(Access);A --> C(Users);A --> D(AccessBuilder);E[LoginController.cs] --> F(LoginFacade);G[UsersController.cs] --> H(Users);",
+    "datetime": "2025-02-12T10:52:52",
+    "http_status": 200
+}

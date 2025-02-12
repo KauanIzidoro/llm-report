@@ -1,0 +1,6 @@
+{
+    "model_answer": "The provided code consists of three C# controller classes (`AccessController`, `LoginController`, and `UsersController`) for a Tag System API.  `AccessController` handles API requests related to access records, including retrieving access history, counting authorized and rejected accesses, and managing individual access entries.  `LoginController` manages user logins and authentication, leveraging a facade for underlying logic.  `UsersController` handles user management, including creating, retrieving, updating, and deleting user accounts.  Each controller uses an Entity Framework Core context (`_context`) to interact with the database.",
+    "mermaid_code": "graph LR;A[AccessController] --> B(GetAccess);A --> C(GetRejectedAccess);A --> D(GetAccessHistory);A --> E(GetTotalAccess);A --> F(GetLatestAccess);A --> G(GetDailyAccess);A --> H(GetWeeklyAccess);A --> I(GetHourlyAccess);A --> J(GetAccess);A --> K(PutAccess);A --> L(PostAccess);A --> M(DeleteAccess);",
+    "datetime": "2025-02-12T11:05:22",
+    "http_status": 200
+}

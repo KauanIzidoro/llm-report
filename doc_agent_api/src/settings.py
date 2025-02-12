@@ -2,6 +2,8 @@ from dotenv import load_dotenv
 from pydantic_settings import BaseSettings
 
 load_dotenv()
+
+
 class Settings(BaseSettings):
     USER_INPUT_PATH: str
     USER_FILE_PATH: str
